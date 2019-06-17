@@ -11,8 +11,4 @@ RUN DEBIAN_FRONTEND=noninteractive \
     vim && \
     rm -rf /var/lib/apt/lists/*
 
-COPY startup.sh /
-
-# expect startup.sh to execute startup tasks, then run dicom server and never terminate
-
-ENTRYPOINT ["/bin/bash","startup.sh"]
+ENTRYPOINT ["storescp", "-od", "/mnt/dicom", "-sp", "11112"]
