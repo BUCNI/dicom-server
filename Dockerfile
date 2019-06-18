@@ -11,4 +11,4 @@ RUN DEBIAN_FRONTEND=noninteractive \
     vim && \
     rm -rf /var/lib/apt/lists/*
 
-ENTRYPOINT ["storescp", "-od", "/mnt/dicom", "-sp", "11112"]
+ENTRYPOINT ["storescp", "-od", "/mnt/dicom", "-sp", "-fe", ".dcm", "11112"]
