@@ -1,0 +1,14 @@
+# /lib/systemd/system/bucni_dicom.service
+[Unit]
+Description=BUCNI DICOM container
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/docker start -a bdsc
+ExecStop=/usr/bin/docker stop -t2 bdsc
+TasksMax=infinity
+
+[Install]
+WantedBy=multi-user.target
