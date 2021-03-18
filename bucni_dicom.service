@@ -1,4 +1,4 @@
-# /lib/systemd/system/bucni_dicom.service
+# install at /lib/systemd/system/bucni_dicom.service
 [Unit]
 Description=BUCNI DICOM container
 Requires=docker.service
