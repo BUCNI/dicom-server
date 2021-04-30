@@ -15,4 +15,4 @@ RUN DEBIAN_FRONTEND=noninteractive \
 
 EXPOSE 11112
 
-ENTRYPOINT ["storescp", "-od", "/data/dicoms", "-sp", "-fe", ".dcm", "11112"]
+ENTRYPOINT ["storescp", "-od", "/dicom", "-sp", "-fe", ".dcm", "11112"]
